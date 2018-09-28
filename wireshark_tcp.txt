@@ -1,0 +1,19 @@
+1. 
+The source/client IP address is 192.168.1.102 and the port number is 1161.
+
+2. 
+The IP address of gaiia.cs.umass.edu is 128.119.245.12. Its sending port and the receiving port is 80.
+
+3. 
+The ip address of my computer is 192.168.1.89 and is using port 61342 
+The ip address and port number used by my client  computer to transfer the file is: 192.168.1.102, 1161.
+
+4. 
+The sequence number of the TCP SYN segment to initiate the connection is 0. The segment that identifies this is a Syn flag that equals 1.
+
+5. 
+The sequence number is 0. The ACK value is 1. This number is determined by adding 1 to the sequence number of the SYN segment. Within the SYNACK segment, there are the SYN and ACK flags that are set to 1 to indicate that it is a SYNACK segment.
+
+6.
+The TCP segment's sequence number contained in the HTTP POST command is 0. 
+
