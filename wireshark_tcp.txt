@@ -15,5 +15,59 @@ The sequence number of the TCP SYN segment to initiate the connection is 0. The 
 The sequence number is 0. The ACK value is 1. This number is determined by adding 1 to the sequence number of the SYN segment. Within the SYNACK segment, there are the SYN and ACK flags that are set to 1 to indicate that it is a SYNACK segment.
 
 6.
-The TCP segment's sequence number contained in the HTTP POST command is 0. 
+The TCP segment's sequence number contained in the HTTP POST command is 1. 
+
+7.
+The sequence numbers and times they were sent and recieved of the first 6 segments of the TCP connection are: 
+Segment number : Sequence number : Time sent (sec) : Time Received ACK (sec) : RTT (sec) : Estimated RTT (sec)
+Segment 1 : 1 : 0.026477 : 0.053937 : 0.02746 : 0.02746
+Segment 2 : 566 : 0.041737 : 0.077294 : 0.035557 : 0.0285
+Segment 3 : 2026 : 0.054026 : 0.124085 : 0.070059 : 0.0337
+Segment 4 : 3486 : 0.054690 : 0.169118 : 0.11443 : 0.0438
+Segment 5 : 4946 : 0.077405 : 0.217299 : 0.13989 : 0.0558
+Segment 6 : 6406 : 0.078157 : 0.267802 : 0.18964 : 0.0725
+
+8.
+The length of the six TCP segments are:
+Segment 1 : 565
+Segment 2 : 1460
+Segment 3 : 1460
+Segment 4 : 1460
+Segment 5 : 1460
+Segment 6 : 1460
+
+9. *
+The minimum amount of available buffer at the advertized at the received for the entire trace is:
+5840 bytes
+The sender is not throttled because the buffer space of the receiver continues to grow until it reaches a maximum buffer space, in which the sender does not reach a high enough window to require throttle.
+
+10.
+There are no repeated sequence numbers of the TCP segments, thus, there are no retransmitted files.
+
+11.
+The receiver typically acknowledges 1460 bytes in an ACK, but this number is not set in stone.
+The receiver is ACKing on every other received segment on No.80. Thus, it aknowledges a total of 2920 bytes of data.
+
+12. 
+Using the time from the first TCP segment : 0.026477 seconds. 
+The last ACK was received at : 5.4583 seconds. 
+The difference : 5.4583 - 0.026477 = 5.4294 seconds.
+The sequence number of the last ACK : 164091 which equals the total number of bytes.
+The sequence number of the first ACK : 1.
+The difference : 164090 bytes
+The throughput : 164090 bytes / 5.4294 seconds = 30.222 KB/sec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
