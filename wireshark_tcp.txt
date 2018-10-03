@@ -62,10 +62,9 @@ The difference : 164090 bytes
 The throughput : 164090 bytes / 5.4294 seconds = 30.222 KB/sec
 
 13. 
-Slow start begins at a time of 0 and ends at a time of 0.07816 seconds, sequence 6406. Congestion avoidance takes over at 0.1242 seconds (seq 7866), when the following packet is sent.  TCP behavior during
-
+Slow start begins at a time of 0 and ends at a time of 0.07816 seconds, sequence 6406. Congestion avoidance takes over at 0.1242 seconds (seq 7866), when the following packet is sent.  We would expect the size of the packets to double when running through slow start.  However, before the length of the TCP segments reach 1460, it is shown that that packets are not doubling in size to reach 1460 and are increasing by a different value, other than double.
 14.  
-When transferring the file from my computer, there does appears to be a brief slow start compared to the prior graph. More packets are sent by the sender. It appears to reach the ssthresh at 0.5165 seconds, where it enters convestion avoidance.  It would be expected with TCP behavior to 
+When transferring the file from my computer, there does appears to be a brief slow start compared to the prior graph. More packets are sent by the sender. It appears to reach the ssthresh at 0.5165 seconds, where it enters convestion avoidance.  Instead of the packets doubling, they (nearly) immediately go to 1514 bytes on wire.
 
 Part B
 
