@@ -1,3 +1,7 @@
+Alexander Harry
+Justin Keeling
+A)
+
 1. 
 The source/client IP address is 192.168.1.102 and the port number is 1161.
 
@@ -57,9 +61,15 @@ The sequence number of the first ACK : 1.
 The difference : 164090 bytes
 The throughput : 164090 bytes / 5.4294 seconds = 30.222 KB/sec
 
+13. 
+Slow start begins at a time of 0 and ends at a time of 0.07816 seconds, sequence 6406. Congestion avoidance takes over at 0.1242 seconds (seq 7866), when the following packet is sent.  TCP behavior during
 
+14.  
+When transferring the file from my computer, there does appears to be a brief slow start compared to the prior graph. More packets are sent by the sender. It appears to reach the ssthresh at 0.5165 seconds, where it enters convestion avoidance.  It would be expected with TCP behavior to 
 
+Part B
 
+My computer is using Go-back-N. The ACKs being sent back from the receiver are cumulative.  I am not receiving an individual ACK for each packet, as would be the case for Selective Repeat.
 
 
 
